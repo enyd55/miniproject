@@ -4,10 +4,15 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Home from './pages/Home/Home';
-import Courses from './pages/Courses/Courses';
+import Courses from './pages/Forum/forum';
 import About from './pages/About/About';
-import Blog from './pages/Blog/Blog';
-import Contact from './pages/Contact/Contact';
+import Blog from './pages/Planner/planner';
+import Contact from './pages/Docs/docs';
+import Profile from './pages/profile/profile';
+import Logsign from './pages/Logsign/Logsign';
+import Signup from './pages/Signup/Signup';
+
+
 
 function App() {
   return (
@@ -15,17 +20,15 @@ function App() {
       <Navbar expand="lg" className='position-absolute w-100'>
         <Container>
           <Navbar.Brand>
-            <Link to="/" className='navbar-brand d-flex align-items-center'>
+            <Link to="/Profile" className='navbar-brand d-flex align-items-center'>
               <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#dc3545" class="bi bi-backpack-fill" viewBox="0 0 16 16">
-                <path d="M5 13v-3h4v.5a.5.5 0 0 0 1 0V10h1v3z"/>
-                <path d="M6 2v.341C3.67 3.165 2 5.388 2 8v5.5A2.5 2.5 0 0 0 4.5 16h7a2.5 2.5 0 0 0 2.5-2.5V8a6.002 6.002 0 0 0-4-5.659V2a2 2 0 1 0-4 0m2-1a1 1 0 0 1 1 1v.083a6.04 6.04 0 0 0-2 0V2a1 1 0 0 1 1-1m0 3a4 4 0 0 1 3.96 3.43.5.5 0 1 1-.99.14 3 3 0 0 0-5.94 0 .5.5 0 1 1-.99-.14A4 4 0 0 1 8 4M4.5 9h7a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-4a.5.5 0 0 1 .5-.5"/>
               </svg>
               <span className='mx-2 text-light lh-1 fw-semibold'>
-                React
-                <br></br>
-                University
-                <br></br>
-                London
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
+</svg>
+
+               ACE
               </span>
             </Link>
           </Navbar.Brand>
@@ -33,21 +36,27 @@ function App() {
           <Navbar.Collapse id='basic-navbar-nav'>
             <Nav className='me-auto justify-content-end w-100'>
               <Nav.Link href='/' className='text-uppercase'>Home</Nav.Link>
-              <Nav.Link href='/courses' className='text-uppercase'>Our courses</Nav.Link>
-              <Nav.Link href='/about' className='text-uppercase'>About us</Nav.Link>
-              <Nav.Link href='/blog' className='text-uppercase'>Blog</Nav.Link>
-              <Nav.Link href='/contact' className='text-uppercase'>Get in touch</Nav.Link>
+              <Nav.Link href='/forum' className='text-uppercase'>Forum</Nav.Link>
+              <Nav.Link href='/about' className='text-uppercase'>About</Nav.Link>
+              <Nav.Link href='/planner' className='text-uppercase'>Planner</Nav.Link>
+              <Nav.Link href='/docs' className='text-uppercase'>Docs </Nav.Link>
+
             </Nav>
           </Navbar.Collapse>
         </Container>
+
       </Navbar>
 
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/courses' element={<Courses />} />
+        <Route path='/forum' element={<Courses />} />
         <Route path='/about' element={<About />} />
-        <Route path='/blog' element={<Blog />} />
-        <Route path='/contact' element={<Contact />} />
+        <Route path='/planner' element={<Blog />} />
+        <Route path='/docs' element={<Contact />} />
+        <Route path='/profile' element={<Profile />} />
+        <Route path='/Logsign' element={<Logsign />} />
+        <Route path='/Signup' element={<Signup />} />
+        
       </Routes>
 
       <footer>
@@ -96,7 +105,7 @@ function App() {
                       <li className='text-uppercase fw-semibold'>Home</li>
                     </Link>
                     <Link to="/courses" className='text-decoration-none text-danger'>
-                      <li className='text-uppercase fw-semibold'>Our courses</li>
+                      <li className='text-uppercase fw-semibold'>Forum</li>
                     </Link>
                     <Link to="/about" className='text-decoration-none text-danger'>
                       <li className='text-uppercase fw-semibold'>About us</li>
@@ -112,13 +121,13 @@ function App() {
                 <div className='col-12 col-md-6 col-lg-7'>
                   <ul className='list-unstyled mb-0'>
                     <li>
-                      <p>Main Address - 47 Street Name, London UK</p>
+                      <p>Ramrao Adik Institute of Technology</p>
                     </li>
                     <li>
-                      <p>Phone Number - 0900800700</p>
+                      <p>Phone Number - 91 1234567890</p>
                     </li>
                     <li>
-                      <p>Email - react@university.co.uk</p>
+                      <p>Email - rail@dypatil.edu</p>
                     </li>
                   </ul>
                 </div>
@@ -128,7 +137,7 @@ function App() {
         </div>
         <div className='bg-body-tertiary'>
           <div className='container'>
-            <p className='p-3 m-0 text-center'>copyright @ made by Ionut Cora</p>
+            <p className='p-3 m-0 text-center'>copyright @ made by RAIT</p>
           </div>
         </div>
       </footer>
@@ -137,3 +146,6 @@ function App() {
 }
 
 export default App;
+
+
+
